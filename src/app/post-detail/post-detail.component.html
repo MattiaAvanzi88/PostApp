@@ -1,0 +1,18 @@
+<div class="back" (click)="goBack()">
+  &lt; 
+</div>
+<mat-card>
+  <mat-card-header>          
+    <mat-card-title class="postTitle">
+      {{post.title}}
+    </mat-card-title>
+    <mat-card-subtitle class="postSubtitle">
+      written by userId: {{post.userId}}
+    </mat-card-subtitle>             
+  </mat-card-header>
+  <mat-divider></mat-divider>   
+  <mat-card-content class="postBody">
+    {{post.body}}
+  </mat-card-content>        
+</mat-card> 
+

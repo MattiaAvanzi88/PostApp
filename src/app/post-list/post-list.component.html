@@ -1,0 +1,39 @@
+<div class="filterCointainer">
+    <mat-form-field class='searchContainer'>
+        <input matInput type="text" (keyup)="filterByText()" placeholder="Find a post ..." [(ngModel)]="filterText">
+        <button mat-button *ngIf="filterText" matSuffix mat-icon-button (click)="filterText=undefined;filterByText();">
+          X
+        </button>
+    </mat-form-field>
+    <mat-button-toggle-group class='orderContainer'>
+      <mat-button-toggle (click)="alphabeticOrder('asc')">ASC Order</mat-button-toggle>
+      <mat-button-toggle (click)="alphabeticOrder('desc')">DESC Order</mat-button-toggle>
+      <mat-button-toggle checked (click)="originalOrder()">Original Posts Order</mat-button-toggle>
+    </mat-button-toggle-group>
+</div>
+
+<div class='postsContainer'>  
+  <mat-card class="customMatCard" *ngFor = "let post of filteredPost" routerLink="/detail/{{post.id}}">
+    <mat-card-header>          
+      <mat-card-title class="titlePost">
+        {{ (post.title.length > 50 ) ? (post.title | slice:0:50)+'..' : (post.title) }}
+      </mat-card-title>
+      <mat-card-subtitle>
+        written by userId: {{post.userId}}
+      </mat-card-subtitle>          
+    </mat-card-header>
+    <mat-divider></mat-divider>   
+    <mat-card-content class="bodyPost"> 
+      {{post.body}}
+    </mat-card-content>        
+  </mat-card>
+  
+  <mat-card id='noPostCard' *ngIf="filteredPost.length === 0">
+      <mat-card-header>          
+          <mat-card-title class="titlePost">
+              No results returned for your selection
+          </mat-card-title>                 
+        </mat-card-header>
+  </mat-card>
+</div>
+

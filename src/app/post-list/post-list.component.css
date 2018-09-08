@@ -1,0 +1,55 @@
+.customMatCard, #noPostCard{
+    margin:20px;
+    border-radius: 20px;    
+}
+
+.searchContainer {
+    display: block;
+    width: 50%;
+    padding-left: 25px;
+}
+
+.orderContainer {    
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.mat-button-toggle-checked  {
+    background-color: #2e2e6d;
+    color: #f5fdff;
+}
+
+.customMatCard:hover {
+    cursor: pointer;
+    background-color: #f5fdff;
+}
+
+.filterCointainer {
+    width: 60%;
+    padding-top: 50px;
+    border-radius: 10px 10px 0px 0px;
+    padding-bottom: 30px;
+    margin: 0% 20% 0 20%;
+    background-color: #dce6e8;
+    display: inline-block;
+}
+
+.postsContainer {    
+    width: 60%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0px 0px 10px 10px;
+    margin: 0% 20% 0 20%;
+    background-color: #dce6e8;
+}
+
+.titlePost {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color:#010048;
+}
+
+.bodyPost {
+    padding-top: 20px;
+}

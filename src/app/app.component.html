@@ -1,0 +1,14 @@
+<div *ngIf="onLoading">
+  On Loading ...
+</div>
+<div *ngIf="!onLoading && !backendErrorFlag"> 
+  <router-outlet></router-outlet>
+</div>
+<div *ngIf="!onLoading && backendErrorFlag">
+  An Error occurred while downloading posts. Please try later..
+</div>
+
+
+
+
+
