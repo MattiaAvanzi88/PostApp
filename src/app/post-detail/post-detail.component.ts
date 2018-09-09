@@ -3,6 +3,12 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common'; 
 import { Post, PostService } from '.././services/post.service';
 
+
+/* 
+  PostDetailComponent recover and display
+  datas of the post with id reported in 
+  the URL string
+*/
 @Component({
   selector: 'app-post-detail',
   templateUrl: './post-detail.component.html',

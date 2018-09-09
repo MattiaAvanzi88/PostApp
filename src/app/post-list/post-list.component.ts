@@ -1,8 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe } from '@angular/core';
 import { Post, PostService } from '.././services/post.service';
 import { TextFilterPipe }  from '.././pipes/text-filter.pipe';
 import { DynamicSortPipe }  from '.././pipes/dynamic-sort.pipe';
 
+
+/* 
+  PostListComponent display all the posts 
+  recovered by the remote server. 
+  It provides the tools for search a post 
+  by a search term and for ordering 
+  alphabetically the posts.
+*/
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
@@ -39,7 +47,6 @@ export class PostListComponent implements OnInit {
   originalOrder() {    
     this.alphabeticFilter = undefined;
     this.filterByText();
-  }
- 
+  } 
 
 }

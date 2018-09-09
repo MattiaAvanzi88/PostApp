@@ -1,6 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from './http.service';
 
+/* 
+  Post service is the main service of the application.
+  - it defines the new class type Post
+  - it defines,using Http Service, the procedure 
+    to download the posts
+  - it can store and provide the posts data
+    for all components of the application
+*/
 export class Post {
   userId: number;
   id: number;

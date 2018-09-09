@@ -1,10 +1,10 @@
-<div *ngIf="onLoading">
-  On Loading ...
+<div id="loaderBox" *ngIf="onLoading">
+  <img src='./assets/loader.gif'>
 </div>
 <div *ngIf="!onLoading && !backendErrorFlag"> 
   <router-outlet></router-outlet>
 </div>
-<div *ngIf="!onLoading && backendErrorFlag">
+<div id="errorBox" *ngIf="!onLoading && backendErrorFlag">
   An Error occurred while downloading posts. Please try later..
 </div>
 
