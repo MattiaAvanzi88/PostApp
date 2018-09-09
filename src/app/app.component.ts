@@ -2,12 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { PostService } from './services/post.service';
 
 /* 
-  The App main component shows a waiting screen as long as
-  the post data has not been downloaded. 
-  Once the Posts have been downloaded, they are saved
-  in the PostService so as to make they available to 
-  the others components.
-  In case of error, a message is shown.
+  The root component of the root shows a waiting screen
+  until the post data has been downloaded. 
+  Once the messages have been saved, they are stored in the PostService.
+   If an download error occurs, a message is displayed.
 */
 @Component({
   selector: 'app-root',
